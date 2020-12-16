@@ -5,7 +5,7 @@ class CashRegister
     @discount = discount
     @items = []
   end
-  def new_item(title, price, quantity = 1)
+  def add_item(title, price, quantity = 1)
     self.total += price * quantity
     @last_price = price * quantity
     while quantity.positive?
